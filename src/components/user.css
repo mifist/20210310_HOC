@@ -1,0 +1,14 @@
+.user {
+  font-size: 2rem;
+  position: relative;
+  background: transparent;
+  border: 2px dotted navy;
+  display: inline-block;
+  padding: 1rem;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-right: 10px;
+}
+.active {
+  border: 2px solid darkorange;
+}
