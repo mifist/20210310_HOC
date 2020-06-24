@@ -1,10 +1,10 @@
 import React from "react";
 
-const Tooltip = ({ text, children }) => (
-  <span>
-    <div className="top-tooltip">{text}</div>
-    <span>{children}</span>
-  </span>
+const Tooltip = ({ date, children }) => (
+  <>
+    <h1 className="news-title">{children}</h1>
+    <div className="tooltip-date">{date}</div>
+  </>
 );
 
 export default Tooltip;

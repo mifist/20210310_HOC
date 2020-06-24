@@ -1,9 +1,9 @@
 import React from "react";
-import User from "./components/User";
+import News from "./components/News";
 
-const App = props => (
+const App = (props) => (
   <div className="container">
-    <User name="Tim" status="active" />
+    <News title="Daily news" />
   </div>
 );
 
