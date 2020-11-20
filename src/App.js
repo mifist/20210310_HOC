@@ -1,8 +1,9 @@
-import React from "react";
-import Message1 from "./components/Message1";
-import Message2 from "./components/Message2";
-import SignInForm from "./components/SignInForm";
-import RegisterForm from "./components/RegisterForm";
+import React from "react"
+import Message1 from "./components/Message1"
+import Message2 from "./components/Message2"
+
+// import SignInForm from "./components/SignInForm";
+//import RegisterForm from "./components/RegisterForm";
 
 const App = () => (
   <div className="container">
@@ -22,6 +23,6 @@ const App = () => (
     </div> 
     */}
   </div>
-);
+)
 
-export default App;
+export default App
