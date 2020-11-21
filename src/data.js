@@ -6,7 +6,7 @@ const data = [
   {
     id: id(),
     text:
-      "Dan Abramob got into programming after he accidentally discovered Visual Basic inside Microsoft PowerPoint. He has found his true calling in turning Sebastian’s tweets into long-form blog posts.",
+      "Dan Abramov got into programming after he accidentally discovered Visual Basic inside Microsoft PowerPoint. He has found his true calling in turning Sebastian’s tweets into long-form blog posts.",
     img: "https://avatars0.githubusercontent.com/u/810438?v=4",
   },
   {
