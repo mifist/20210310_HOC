@@ -1,15 +1,17 @@
-import React, {Component} from "react"
+import {memo} from "react"
 
-class Course extends Component {
-  render() {
-    const {item} = this.props
-    return (
-      <li className="list-group-item">
-        <h2>{item.title}</h2>
-        <button className="btn btn-primary">Open</button>
-      </li>
-    )
-  }
+const Course = ({item, toggle, isOpen}) => {
+  console.log("RENDER", item.id)
+
+  return (
+    <li className="list-group-item">
+      <h2>{item.title}</h2>
+      {isOpen && <p>{item.anons}</p>}
+      <button onClick={() => toggle(item.id)} className="btn btn-primary">
+        {isOpen ? "Close anons" : "Show anons"}
+      </button>
+    </li>
+  )
 }
 
-export default Course
+export default memo(Course)
