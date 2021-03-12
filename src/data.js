@@ -73,7 +73,7 @@ function subscribeToMessages(fn) {
     const msg = {...data[Math.floor(Math.random() * data.length)]}
     msg.id = id()
     fn(msg)
-  }, 6000)
+  }, 3000)
 }
 
 export {data, subscribeToMessages, getInitData}

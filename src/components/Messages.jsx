@@ -1,5 +1,6 @@
 import React from "react"
 import {subscribeToMessages, getInitData} from "../data"
+import PrintScrollToBottom from "./PrintScrollToBottom"
 
 class Messages extends React.Component {
   state = {
@@ -20,17 +21,19 @@ class Messages extends React.Component {
       <div className="container">
         <span className="info">{messages.length}</span>
 
-        <ul className="grid">
-          {messages.map(message => (
-            <li className="box" key={message.id}>
-              <div
-                className="box__avatar"
-                style={{backgroundImage: `url(${message.img})`}}
-              />
-              <p className="box__content">{message.text}</p>
-            </li>
-          ))}
-        </ul>
+        <PrintScrollToBottom>
+          <ul className="grid">
+            {messages.map(message => (
+              <li className="box" key={message.id}>
+                <div
+                  className="box__avatar"
+                  style={{backgroundImage: `url(${message.img})`}}
+                />
+                <p className="box__content">{message.text}</p>
+              </li>
+            ))}
+          </ul>
+        </PrintScrollToBottom>
       </div>
     )
   }
