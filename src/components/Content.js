@@ -1,13 +1,11 @@
-import {withState} from "recompose"
+import withToggle from "../hocs/withToggle"
 
-const enhance = withState("show", "setShow", false)
-
-const Content = ({show, setShow}) => (
+const Content = ({on, toggle}) => (
   <div className="content">
-    <span onClick={() => setShow(x => !x)} className="show-more">
-      {show ? "Hide more" : "Show more"}
+    <span onClick={toggle} className="show-more">
+      {on ? "Hide more" : "Show more"}
     </span>
-    {show && (
+    {on && (
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed
         vulputate odio, sit amet eleifend turpis. Ut faucibus interdum
@@ -17,4 +15,4 @@ const Content = ({show, setShow}) => (
   </div>
 )
 
-export default enhance(Content)
+export default withToggle(Content)

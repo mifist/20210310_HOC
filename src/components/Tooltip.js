@@ -1,10 +1,12 @@
-import React from "react";
+import withToggle from "../hocs/withToggle"
 
-const Tooltip = ({ date, children }) => (
+const Tooltip = ({date, children, show, hide, on}) => (
   <>
-    <h1 className="news-title">{children}</h1>
-    <div className="tooltip-date">{date}</div>
+    <h1 onMouseOver={show} onMouseOut={hide} className="news-title">
+      {children}
+    </h1>
+    {on && <div className="tooltip-date">{date}</div>}
   </>
-);
+)
 
-export default Tooltip;
+export default withToggle(Tooltip)
